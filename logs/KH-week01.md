@@ -1,6 +1,6 @@
 # Week 01
 
-**Date:** July 11 – July 17, 2026
+**Date:** July 12 – July 18, 2026
 
 ---
 
