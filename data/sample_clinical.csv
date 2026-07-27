@@ -1,0 +1,9 @@
+PatientID,Age,Sex,ZIP3,AdmissionDays,SeverityScore,Diagnosis,Medication,RiskScore
+P001,45,F,021,3,4,Hypertension,Lisinopril,0.82
+P002,67,M,152,5,5,Diabetes,Metformin,0.74
+P003,31,F,100,1,2,Asthma,Albuterol,0.25
+P004,58,M,303,7,5,Heart Failure,Furosemide,0.91
+P005,72,F,606,4,4,COPD,Prednisone,0.68
+P006,54,M,191,2,3,Pneumonia,Azithromycin,0.57
+P007,39,F,441,6,5,Stroke,Aspirin,0.88
+P008,63,M,733,5,4,Chronic Kidney Disease,Losartan,0.79

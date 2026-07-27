@@ -1,0 +1,9 @@
+-r requirements.txt
+
+# HPC-specific packages
+# Install these only on HPC systems
+
+mpi4py
+
+# cuQuantum will be added later once we know
+# the CUDA version on the cluster.
