@@ -1,7 +1,5 @@
 # Contributing to QuantumHPC
 
-Thank you for contributing to the QuantumHPC research project!
-
 This repository supports a collaborative DREU research project. Please follow the guidelines below to keep the repository organized and maintain a stable codebase.
 
 ---
