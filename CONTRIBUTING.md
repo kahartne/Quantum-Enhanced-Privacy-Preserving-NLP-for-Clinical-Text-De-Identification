@@ -58,7 +58,7 @@ git merge main
 
 # Commit Messages
 
-Write clear commit messages.
+Write clear commit messages. (Optional but appreciated)
 
 Good examples
 
