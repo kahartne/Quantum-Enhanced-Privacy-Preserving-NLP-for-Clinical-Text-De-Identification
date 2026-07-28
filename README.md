@@ -126,9 +126,9 @@ python main.py
 
 | Member | Responsibilities |
 |----------|-----------------|
-| Kyle Hartness | HPC, Benchmarking, MPI, Repository Maintenance |
-| Edmund | Quantum Circuits, Quantum Algorithms |
-| Sofia | Clinical Data, Preprocessing |
+| Kyle Hartness | HPC, Benchmarking, MPI, Scalability, Repository Maintenance |
+| Edmund Bombardieri | Quantum Circuits, Quantum Algorithms, QPE, QFI, Noise Experimentation |
+| Sofia Furda | Clinical Data, Preprocessing, NLP Pipeline, Privacy-Utility |
 
 ---
 
