@@ -14,7 +14,7 @@
 
 # Approach & Implementation
 
-Attended the Week 1–2 check-in meeting with Dr. Mahajan, Edmund, and Kyle to review progress and align on next steps. Prepared and delivered the Week 1 presentation to the group. Completed the CITI Program's Data or Specimens Only Research training, required for MIMIC-III access, and submitted the data use agreement for approval. Became familiar with the team's shared GitHub repository, branch workflow, and existing work from teammates before organizing and pushing my Week 1 circuit notebooks to my own branch. Began compiling background resources and references related to NLP, quantum computing, and privacy-preserving techniques relevant to the project.
+Attended the Week 1–2 check-in meeting with Dr. Mahajan, Edmund, and Kyle to review progress and align on next steps. Delivered the Week 1 presentation to the group, covering my background, work completed, upcoming timeline and tasks for my section of the project, and any challenges or clarifications needed. Completed the CITI Program's Data or Specimens Only Research training, required for MIMIC-III access, and submitted the data use agreement for approval. Became familiar with the team's shared GitHub repository, branch workflow, and existing work from teammates before organizing and pushing my Week 1 circuit notebooks to my own branch. Began compiling background resources and references related to NLP, quantum computing, and privacy-preserving techniques relevant to the project.
 
 ---
 
