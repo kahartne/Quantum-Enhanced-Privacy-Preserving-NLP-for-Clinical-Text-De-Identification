@@ -15,7 +15,7 @@
 
 # Approach & Implementation
 
-Reviewed Qiskit's documentation and several introductory resources to build familiarity with the syntax and core concepts before getting into the code. Installed Qiskit and Qiskit Aer and tested the setup with a simple 2 qubit circuit before moving into the required circuits. Built the Bell state and GHZ state circuits using only Hadamard and CNOT gates, and separately tested the X, H, and Z gates on their own to confirm my understanding of each gate before combining them. Constructed the ZZFeatureMap manually using Hadamard, RZ, and CX gates to encode input features and their interactions, first at 2 qubits then extended to 4. For each circuit, I examined the measurement counts and statevector to confirm the circuit behaved as expected. Attended the Week 1-2 check-in meeting with Dr. Mahajan, Edmund, and Kyle to review progress and align on next steps.
+Reviewed Qiskit's documentation and several introductory resources to build familiarity with the syntax and core concepts before getting into the code. Installed Qiskit and Qiskit Aer and tested the setup with a simple 2 qubit circuit before moving into the required circuits. Built the Bell state and GHZ state circuits using only Hadamard and CNOT gates, and separately tested the X, H, and Z gates on their own to confirm my understanding of each gate before combining them. Constructed the ZZFeatureMap manually using Hadamard, RZ, and CX gates to encode input features and their interactions, first at 2 qubits then extended to 4. For each circuit, I examined the measurement counts and statevector to confirm the circuit behaved as expected. 
 
 ---
 
@@ -29,9 +29,9 @@ Reviewed Qiskit's documentation and several introductory resources to build fami
 
 # Next Steps
 
-- Load the i2b2/MIMIC III placeholder dataset and count PHI category frequencies.
-- Start a literature review spreadsheet covering NLP techniques, quantum techniques, and privacy preserving techniques.
-- Start on the baseline system and SHAP implementation.
+- Prepare project presentation.
+- Load the i2b2/MIMIC III placeholder dataset and count PHI categories.
+- Start a literature review spreadsheet on NLP, quantum, and privacy preserving techniques.
 
 ---
 
