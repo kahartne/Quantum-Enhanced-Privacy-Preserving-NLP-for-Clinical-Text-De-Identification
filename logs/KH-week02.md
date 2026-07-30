@@ -41,5 +41,6 @@ Prepared and delivered the Week 1 project presentation describing the manual ZZF
 
 # References
 
-- GitHub Documentation
-- Git Documentation
+[3] S. Chacon and B. Straub, *Pro Git*, 2nd ed. Apress, 2014.
+
+[4] GitHub, Inc., *GitHub Docs*.

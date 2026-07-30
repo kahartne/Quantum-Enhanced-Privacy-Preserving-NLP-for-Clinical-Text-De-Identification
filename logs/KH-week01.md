@@ -39,5 +39,6 @@ Configured the Python development environment and installed Qiskit dependencies.
 
 # References
 
-- Qiskit Documentation
-- Qiskit Aer Documentation
+[1] A. Javadi-Abhari et al., "Quantum Computing with Qiskit," 2024.
+
+[2] Qiskit Development Team, *Qiskit Aer: High Performance Simulator for Quantum Circuits*.
