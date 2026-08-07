@@ -31,7 +31,7 @@ The primary objectives of this project are to:
 
 ---
 
-# Repository Structure
+# Repository Structure (to be updated)
 
 ```
 QuantumHPC/
@@ -58,7 +58,7 @@ QuantumHPC/
 
 ---
 
-# Current Progress
+# Current Progress (to be updated)
 
 Completed
 
@@ -155,7 +155,7 @@ Each weekly entry contains:
 
 ---
 
-# Technologies
+# Technologies (to be updated)
 
 - Python
 - Qiskit
