@@ -2,8 +2,6 @@
 
 Distributed Research Experience for Undergraduates (DREU) research project investigating scalable quantum simulation, high-performance computing (HPC), and quantum machine learning workflows for clinical text deidentification.
 
-*Title and description to be updated with Edmund & Sofia's work*
-
 ---
 
 # Overview
