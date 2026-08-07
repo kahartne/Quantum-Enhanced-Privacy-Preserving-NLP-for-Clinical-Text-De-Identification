@@ -16,6 +16,7 @@ The project focuses on:
 - Distributed execution using MPI
 - Performance evaluation across HPC resources such as Jetstream2 and Bridges-2
 - Future applications in clinical text deidentification
+- *To be updated with Edmund & Sofia's work*
 
 ---
 
@@ -28,10 +29,11 @@ The primary objectives of this project are to:
 - Investigate distributed quantum simulation using MPI.
 - Evaluate scalability on HPC systems.
 - Build a reproducible research workflow through version control and documentation.
+- *To be updated with Edmund & Sofia's work*
 
 ---
 
-# Repository Structure
+# Repository Structure (to be updated)
 
 ```
 QuantumHPC/
@@ -58,7 +60,7 @@ QuantumHPC/
 
 ---
 
-# Current Progress
+# Current Progress (to be updated)
 
 Completed
 
@@ -155,7 +157,7 @@ Each weekly entry contains:
 
 ---
 
-# Technologies
+# Technologies (to be updated)
 
 - Python
 - Qiskit

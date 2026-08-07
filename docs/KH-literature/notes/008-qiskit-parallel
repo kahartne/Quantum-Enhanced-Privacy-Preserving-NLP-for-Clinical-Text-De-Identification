@@ -1,0 +1,42 @@
+# 008 – Qiskit Parallel / HPC Documentation
+
+## IEEE Reference
+
+[8] Qiskit Development Team, *Qiskit Aer Documentation: Running with Threadpool and Parallel Execution*. [Online]. Available: https://qiskit.github.io/qiskit-aer/. Accessed: Aug. 1, 2026.
+
+---
+
+## Purpose
+
+Understand how AerSimulator parallelizes quantum simulations and to determine whether MPI should supplement or replace Aer's built-in parallelization.
+
+---
+
+## Summary
+
+The documentation describes AerSimulator execution methods, CPU thread pools, GPU execution, backend configuration, and performance optimization options.
+
+---
+
+## Important Topics
+
+- Thread pools
+- GPU simulation
+- Statevector execution
+- Parallel backend options
+- Runtime optimization
+
+---
+
+## Relevance
+
+- Benchmarking
+- MPI comparison
+- GPU execution
+- HPC deployment
+
+---
+
+## Personal Notes
+
+- (To be added.)
