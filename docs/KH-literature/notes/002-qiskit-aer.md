@@ -6,9 +6,9 @@
 
 ---
 
-## Why this project matters
+## Purpose
 
-Qiskit Aer is the simulator used throughout the QuantumHPC project.
+Qiskit Aer is the simulator used throughout the QuantumHPC project. Primarily used to test quantum circuits developed early in the project.
 
 ---
 
@@ -29,26 +29,23 @@ Qiskit Aer provides high-performance classical simulation of quantum circuits, i
 
 ---
 
-## How it applies to QuantumHPC
+## Relevance
 
-✓ AerSimulator
-
-✓ GPU benchmarking
-
-✓ Runtime measurements
-
-✓ Jetstream2
-
-✓ Bridges-2
+- AerSimulator
+- GPU benchmarking
+- Runtime measurements
+- Jetstream2
+- Bridges-2
 
 ---
 
 ## Personal Notes
 
-(To be completed.)
-
----
-
-## Questions
-
-(To be completed.)
+- class AerSimulator(configuration, properties, provider, target, backend_options)
+- backend = AerSimulator
+- Multiple simulation methods available, including "statevector" which is a statevector simulation which appears to be useful when dealing with noisy simulations, each shot randomly samples a circuit.
+- Some simulation methods, including statevector, are suported on GPU (additionally density_matrix, unitary, and tensor_network [GPU only])
+- Set device="GPU" to run a GPU simulation
+- Many other GPU configurations and commands can be seen in the documentation, such as methods of checking available GPU(s) and their IDs if there are multiple involved.
+- num_qubits teturns the number of qubits in the backend
+- Also a variety of noise modeling is included in the documentation which may be beneficial for the future of the project
