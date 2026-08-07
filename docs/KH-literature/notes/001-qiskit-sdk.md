@@ -6,15 +6,9 @@
 
 ---
 
-## Authors
+## Purpose
 
-Ali Javadi-Abhari et al.
-
----
-
-## Why this paper matters
-
-This is the official academic reference for the Qiskit SDK recommended by IBM for research publications.
+This is the official academic reference for the Qiskit SDK recommended by IBM for research publications. Useful in learning Qiskit for developing quantum circuits for the QuantumHPC project.
 
 ---
 
@@ -36,26 +30,19 @@ The paper introduces the Qiskit Software Development Kit (SDK), explaining its d
 
 ---
 
-## How it applies to QuantumHPC
+## Relevance
 
-✓ Manual circuit construction
-
-✓ Repository architecture
-
-✓ Documentation
-
-✓ Benchmarking framework
-
-✓ Qiskit programming model
+- Manual circuit construction
+- Repository architecture
+- Documentation
+- Benchmarking framework
+- Qiskit programming model
 
 ---
 
 ## Personal Notes
 
-(To be filled in while reading.)
-
----
-
-## Questions
-
-(To be filled in while reading.)
+- Primarily in Python language, has interfaces and properties in place that allow great flexibility
+- Agnositic to underlying hardware (very versatile, good when you may need to test on multiple different types of hardware) [Target class]
+- Generally operates in a four-step workflow: circuit mapping (quantum encoding) -> transpilation (transformation to work with hardware) -> evalutation -> post-processing
+- Includes multiple types of circuit visualization capabilities

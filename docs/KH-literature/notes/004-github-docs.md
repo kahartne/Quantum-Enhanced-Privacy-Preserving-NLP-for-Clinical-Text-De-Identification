@@ -8,7 +8,7 @@
 
 ## Purpose
 
-Official documentation for GitHub.
+Official documentation for GitHub. Useful for creating an archive and central repository for multiple individuals to access and manipulate.
 
 ---
 
@@ -18,32 +18,25 @@ Provides documentation for repository management, pull requests, GitHub Projects
 
 ---
 
-## Topics
+## Important Topics
 
 - Pull Requests
-
 - CODEOWNERS
-
 - Projects
-
 - Issues
-
 - Collaboration
 
 ---
 
-## Relevance to QuantumHPC
+## Relevance
 
-✓ Repository organization
-
-✓ Project management
-
-✓ Team collaboration
-
-✓ Code review
+- Repository organization
+- Project management
+- Team collaboration
+- Code review
 
 ---
 
 ## Personal Notes
 
-(To be completed.)
+- No major notes, this reference primarily serves as an extensive and easily accessible source to return to when trying to navigate GitHub. Plenty of specific GitHub tasks are covered in [3].
