@@ -1,19 +1,65 @@
 #!/bin/bash
 
-#SBATCH --job-name=quantumhpc-sweep       # Job name
-#SBATCH --nodes=1                         # Request 1 computing node
-#SBATCH --ntasks=4                        # Request 4 MPI tasks/processes
-#SBATCH --time=00:10:00                   # Maximum requested runtime
-#SBATCH --array=0-11                      # 12 array tasks for 12 experiments (4 epsilon values x 3 conditions)
-#SBATCH --output=results/slurm-%A_%a.out  # Save output to file (%j becomes job ID)
+#SBATCH --job-name=quantumhpc-sweep
+#SBATCH --account=tra260010p
+#SBATCH --partition=RM
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --time=00:10:00
+#SBATCH --array=0-11
+#SBATCH --output=results/logs/slurm-%A_%a.out
 
-# Load the appropriate compiler/MPI environment.
-# The exact module names to be determined on Bridges-2.
+# ============================================================
+# QuantumHPC Parameter Sweep
+#
+# 12 total experiments:
+#   epsilon = 1, 2, 4, 8
+#   conditions = noiseless, depolarizing, amplitude damping
+#
+# Each SLURM array task represents one experiment.
+# ============================================================
 
-# Each array task represents one parameter combination
+# Use the MPI environment verified on Bridges-2.
+module load openmpi/4.0.5-nvhpc21.2
+
+# Map each array index to an epsilon/condition combination.
+EPSILONS=(1 1 1 2 2 2 4 4 4 8 8 8)
+
+CONDITIONS=(
+    "noiseless"
+    "depolarizing"
+    "amplitude_damping"
+    "noiseless"
+    "depolarizing"
+    "amplitude_damping"
+    "noiseless"
+    "depolarizing"
+    "amplitude_damping"
+    "noiseless"
+    "depolarizing"
+    "amplitude_damping"
+)
+
+EPSILON=${EPSILONS[$SLURM_ARRAY_TASK_ID]}
+CONDITION=${CONDITIONS[$SLURM_ARRAY_TASK_ID]}
+
+echo "========================================"
 echo "QuantumHPC parameter sweep"
-echo "Job ID: $SLURM_ARRAY_JOB_ID"
-echo "Task ID: $SLURM_ARRAY_TASK_ID"
+echo "Job ID:       $SLURM_JOB_ID"
+echo "Array Job:    $SLURM_ARRAY_JOB_ID"
+echo "Array Task:   $SLURM_ARRAY_TASK_ID"
+echo "Node:         $(hostname)"
+echo "Epsilon:      $EPSILON"
+echo "Condition:    $CONDITION"
+echo "========================================"
 
-# Future:
-# python main.py --experiment $SLURM_ARRAY_TASK_ID
+# ------------------------------------------------------------
+# Future QuantumHPC execution:
+#
+# python main.py \
+#     --epsilon "$EPSILON" \
+#     --condition "$CONDITION"
+#
+# The exact command will be finalized after the
+# QuantumHPC experiment interface is implemented.
+# ------------------------------------------------------------
