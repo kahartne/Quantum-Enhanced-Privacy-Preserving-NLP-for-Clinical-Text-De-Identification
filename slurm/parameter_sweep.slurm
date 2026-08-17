@@ -21,6 +21,13 @@
 
 # Use the MPI environment verified on Bridges-2.
 module load openmpi/4.0.5-nvhpc21.2
+module load anaconda3/2024.10-1
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate quantumhpc
+
+echo "Python:"
+which python
+python --version
 
 # Map each array index to an epsilon/condition combination.
 EPSILONS=(1 1 1 2 2 2 4 4 4 8 8 8)
