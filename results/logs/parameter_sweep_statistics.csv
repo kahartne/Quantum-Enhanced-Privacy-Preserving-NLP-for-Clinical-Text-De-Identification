@@ -1,0 +1,4 @@
+Condition,Minimum_ms,Maximum_ms,Average_ms
+amplitude_damping,8.295,31.146,16.07725
+depolarizing,19.467,95.58,52.12475
+noiseless,22.112,101.005,53.308499999999995
