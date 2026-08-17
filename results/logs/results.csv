@@ -11,3 +11,4 @@ Timestamp,Epsilon,Delta,Condition,Dataset,Backend,Qubits,Features,Feature_Map_Re
 2026-08-16T22:28:27,8.0,1e-05,noiseless,sample_clinical.csv,cpu,5,5,1,1024,0.218,0.185,7.325
 2026-08-16T22:28:39,8.0,1e-05,depolarizing,sample_clinical.csv,cpu,5,5,1,1024,0.196,0.179,29.151
 2026-08-16T22:28:54,8.0,1e-05,amplitude_damping,sample_clinical.csv,cpu,5,5,1,1024,0.197,0.182,6.276
+2026-08-16T22:52:59,1.0,1e-05,noiseless,sample_clinical.csv,cpu,5,5,1,1024,0.626,0.946,7892.271
