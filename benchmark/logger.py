@@ -20,13 +20,18 @@ class ExperimentLogger:
 
         self.header = [
             "Timestamp",
+            "Epsilon",
+            "Delta",
+            "Condition",
             "Dataset",
             "Backend",
             "Qubits",
             "Features",
             "Feature_Map_Reps",
             "Shots",
-            "Runtime_ms"
+            "Library_Build_ms",
+            "Manual_Build_ms",
+            "Simulation_ms",
         ]
 
         # Create file if it doesn't exist
@@ -40,13 +45,18 @@ class ExperimentLogger:
 
     def log(
         self,
+        epsilon,
+        delta,
+        condition,
         dataset,
         backend,
         qubits,
         features,
         reps,
         shots,
-        runtime
+        library_build_ms,
+        manual_build_ms,
+        simulation_ms,
     ):
 
         with open(self.output_file, "a", newline="") as file:
@@ -55,11 +65,16 @@ class ExperimentLogger:
 
             writer.writerow([
                 datetime.now().isoformat(timespec="seconds"),
+                epsilon,
+                delta,
+                condition,
                 dataset,
                 backend,
                 qubits,
                 features,
                 reps,
                 shots,
-                round(runtime, 3)
+                round(library_build_ms, 3),
+                round(manual_build_ms, 3),
+                round(simulation_ms, 3),
             ])

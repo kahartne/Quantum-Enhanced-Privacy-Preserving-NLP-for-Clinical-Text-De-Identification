@@ -12,6 +12,7 @@ pandas==3.0.3
 
 # Visualization
 matplotlib==3.11.0
+pylatexenc==2.10
 
 # Machine Learning
 scikit-learn==1.9.0

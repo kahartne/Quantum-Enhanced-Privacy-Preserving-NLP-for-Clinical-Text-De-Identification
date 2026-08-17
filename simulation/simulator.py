@@ -6,7 +6,8 @@ using Qiskit Aer.
 """
 import numpy as np
 import time
-from qiskit_aer import AerSimulator
+from backends.backend_factory import BackendFactory
+from experiment.aer_noise_factory import NoiseModelFactory
 from qiskit.quantum_info import Statevector
 from qiskit import transpile
 
@@ -15,13 +16,25 @@ class QuantumSimulator:
     Runs quantum circuits using Qiskit Aer.
     """
 
-    def __init__(self):
+    def __init__(
+        self,
+        backend="cpu",
+        condition="noiseless",
+    ):
+        self.backend_type = backend.lower()
+        self.condition = condition.lower()
 
-        self.backend = AerSimulator()
+        self.noise_model = NoiseModelFactory.create(
+            condition=self.condition
+        )
+
+        self.backend = BackendFactory.create(
+            self.backend_type
+        )
 
     def backend_name(self):
 
-        return self.backend.name
+        return self.backend_type
     
     """
     Execution
@@ -41,7 +54,7 @@ class QuantumSimulator:
 
         start = time.perf_counter()
 
-        job = self.backend.run(compiled, shots=shots)
+        job = self.backend.run(compiled, shots=shots, noise_model=self.noise_model)
 
         result = job.result()
 
@@ -73,12 +86,20 @@ class QuantumSimulator:
         print("\nSimulation Backend")
         print("-" * 40)
 
-        print(f"Backend : {self.backend.name}")
+        print(f"Backend : {self.backend_type}")
+        print(f"Aer     : {self.backend.name}")
 
         try:
             print(f"Method  : {self.backend.options.method}")
         except Exception:
             pass
+
+        try:
+            print(f"Device  : {self.backend.options.device}")
+        except Exception:
+            pass
+
+        print(f"Noise   : {self.condition}")
     
     def print_runtime_summary(self, library_build_time, manual_build_time):
 
