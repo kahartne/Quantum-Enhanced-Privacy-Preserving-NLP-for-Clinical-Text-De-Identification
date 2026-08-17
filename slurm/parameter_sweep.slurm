@@ -43,8 +43,21 @@ CONDITIONS=(
 EPSILON=${EPSILONS[$SLURM_ARRAY_TASK_ID]}
 CONDITION=${CONDITIONS[$SLURM_ARRAY_TASK_ID]}
 
-echo "========================================"
-echo "QuantumHPC parameter sweep"
+# ------------------------------------------------------------
+# Task-specific result file
+# ------------------------------------------------------------
+
+RESULT_FILE="results/logs/slurm-${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.csv"
+
+export QUANTUMHPC_RESULTS_FILE="$RESULT_FILE"
+
+# ------------------------------------------------------------
+# Experiment information
+# ------------------------------------------------------------
+
+echo "============================================================"
+echo "QuantumHPC SLURM Experiment"
+echo "============================================================"
 echo "Job ID:       $SLURM_JOB_ID"
 echo "Array Job:    $SLURM_ARRAY_JOB_ID"
 echo "Array Task:   $SLURM_ARRAY_TASK_ID"
@@ -54,12 +67,22 @@ echo "Condition:    $CONDITION"
 echo "========================================"
 
 # ------------------------------------------------------------
-# Future QuantumHPC execution:
-#
-# python main.py \
-#     --epsilon "$EPSILON" \
-#     --condition "$CONDITION"
-#
-# The exact command will be finalized after the
-# QuantumHPC experiment interface is implemented.
+# Execute QuantumHPC experiment
 # ------------------------------------------------------------
+
+python main.py \
+    --epsilon "$EPSILON" \
+    --condition "$CONDITION"
+
+# ------------------------------------------------------------
+# Completion
+# ------------------------------------------------------------
+
+EXIT_CODE=$?
+
+echo "============================================================"
+echo "QuantumHPC experiment finished"
+echo "Exit code    : $EXIT_CODE"
+echo "============================================================"
+
+exit $EXIT_CODE

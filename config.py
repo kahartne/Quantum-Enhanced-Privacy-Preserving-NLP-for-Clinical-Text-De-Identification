@@ -5,6 +5,7 @@ Global configuration for the Quantum HPC project.
 """
 
 from pathlib import Path
+import os
 
 # --------------------------------------------------
 # Project Paths
@@ -60,7 +61,12 @@ for directory in [
 ]:
     directory.mkdir(exist_ok=True)
 
-RESULTS_FILE = LOGS_DIR / "results.csv"
+RESULTS_FILE = Path(
+    os.environ.get(
+        "QUANTUMHPC_RESULTS_FILE",
+        LOGS_DIR / "results.csv"
+    )
+)
 
 # ----------------------------
 # Plot Directories
