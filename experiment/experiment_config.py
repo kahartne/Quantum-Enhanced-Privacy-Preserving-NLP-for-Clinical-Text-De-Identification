@@ -4,19 +4,13 @@ Experiment configuration for the Quantum HPC project.
 
 from dataclasses import dataclass
 
-# --------------------------------------------------
-# Supported experiment values
-# --------------------------------------------------
-
-EPSILON_VALUES = [1, 2, 4, 8]
-
-DELTA = 1e-5
-
-NOISE_CONDITIONS = [
-    "noiseless",
-    "depolarizing",
-    "amplitude_damping",
-]
+from config import (
+    DEFAULT_CONDITION,
+    DEFAULT_EPSILON,
+    DELTA,
+    EPSILON_VALUES,
+    NOISE_CONDITIONS,
+)
 
 # --------------------------------------------------
 # Experiment configuration
@@ -32,9 +26,9 @@ class ExperimentConfig:
     simulation/noise model.
     """
 
-    epsilon: float = 1
+    epsilon: float = DEFAULT_EPSILON
     delta: float = DELTA
-    condition: str = "noiseless"
+    condition: str = DEFAULT_CONDITION
 
     def validate(self):
         """

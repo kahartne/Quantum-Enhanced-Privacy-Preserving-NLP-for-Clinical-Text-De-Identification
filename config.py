@@ -1,53 +1,88 @@
 """
-config.py
-
 Global configuration for the Quantum HPC project.
+
+This file contains the default settings for experiments.
+Edit the values in the sections below to change the default
+experiment configuration.
 """
 
 from pathlib import Path
 import os
 
-# --------------------------------------------------
+
+# ============================================================
 # Project Paths
-# --------------------------------------------------
+# ============================================================
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 
 DATA_DIR = PROJECT_ROOT / "data"
 RESULTS_DIR = PROJECT_ROOT / "results"
+PLOTS_DIR = PROJECT_ROOT / "plots"
 
-RESULTS_DIR.mkdir(exist_ok=True)
 
-# --------------------------------------------------
+# ============================================================
 # Dataset
-# --------------------------------------------------
+# ============================================================
 
 DATASET_NAME = "sample_clinical.csv"
 DATASET_PATH = DATA_DIR / DATASET_NAME
 
-# --------------------------------------------------
-# Quantum Settings
-# --------------------------------------------------
 
+# ============================================================
+# Quantum Circuit
+# ============================================================
+
+# NOTE:
+# NUM_QUBITS is currently reserved for the future circuit
+# configuration. The current feature-map implementation
+# derives the number of qubits from the number of features.
 NUM_QUBITS = 8
-FEATURE_MAP_REPS = 1
-SHOTS = 1024
 
-# --------------------------------------------------
-# Backend
-# --------------------------------------------------
+FEATURE_MAP_REPS = 1
+
+
+# ============================================================
+# Simulation
+# ============================================================
+
+SHOTS = 1024
 
 BACKEND = "cpu"
 
-# cpu
-# gpu
-# cuquantum
+# Available backend options:
+#   cpu
+#   gpu
+#   cuquantum
 
-# ----------------------------
-# Results Directories
-# ----------------------------
 
-RESULTS_DIR = PROJECT_ROOT / "results"
+# ============================================================
+# Privacy / Noise Experiment
+# ============================================================
+
+DEFAULT_EPSILON = 1.0
+
+DELTA = 1e-5
+
+DEFAULT_CONDITION = "noiseless"
+
+EPSILON_VALUES = [
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+]
+
+NOISE_CONDITIONS = [
+    "noiseless",
+    "depolarizing",
+    "amplitude_damping",
+]
+
+
+# ============================================================
+# Results
+# ============================================================
 
 LOGS_DIR = RESULTS_DIR / "logs"
 TABLES_DIR = RESULTS_DIR / "tables"
@@ -61,6 +96,11 @@ for directory in [
 ]:
     directory.mkdir(exist_ok=True)
 
+
+# Main results file.
+#
+# QUANTUMHPC_RESULTS_FILE can be set by SLURM or another
+# external process to override this location.
 RESULTS_FILE = Path(
     os.environ.get(
         "QUANTUMHPC_RESULTS_FILE",
@@ -68,11 +108,10 @@ RESULTS_FILE = Path(
     )
 )
 
-# ----------------------------
-# Plot Directories
-# ----------------------------
 
-PLOTS_DIR = PROJECT_ROOT / "plots"
+# ============================================================
+# Plot Directories
+# ============================================================
 
 FEATURE_MAP_DIR = PLOTS_DIR / "feature_maps"
 CIRCUIT_DIR = PLOTS_DIR / "circuits"

@@ -5,6 +5,7 @@ Main entry point for the QuantumHPC framework.
 """
 
 import argparse
+from config import DEFAULT_CONDITION, DEFAULT_EPSILON, NOISE_CONDITIONS
 from experiment.experiment_config import ExperimentConfig
 from experiment.experiment_runner import ExperimentRunner
 
@@ -18,19 +19,15 @@ def parse_arguments():
     parser.add_argument(
         "--epsilon",
         type=float,
-        default=1,
+        default=DEFAULT_EPSILON,
         help="Differential privacy epsilon value."
     )
 
     parser.add_argument(
         "--condition",
         type=str,
-        default="noiseless",
-        choices=[
-            "noiseless",
-            "depolarizing",
-            "amplitude_damping",
-        ],
+        default=DEFAULT_CONDITION,
+        choices=NOISE_CONDITIONS,
         help="Quantum simulation noise condition."
     )
 
