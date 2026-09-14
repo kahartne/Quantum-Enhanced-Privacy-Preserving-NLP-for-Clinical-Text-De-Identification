@@ -37,10 +37,14 @@ class QuantumKernel:
             entanglement=entanglement,
         )
 
-        self.simulator = QuantumSimulator(
-            backend=backend,
-            condition="noiseless",
-        )
+        if backend == "gpu":
+            from simulation.qsim_simulator import QSimSimulator
+            self.simulator = QSimSimulator()
+        else:
+            self.simulator = QuantumSimulator(
+                backend=backend,
+                condition="noiseless",
+            )
 
     def encode(self, feature_vector):
         """
